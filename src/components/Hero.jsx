@@ -102,7 +102,8 @@ function Hero() {
               </Button>
 
               {/* ANIMATED SVG BORDER */}
-              <AnimatedBorderButton>
+              <AnimatedBorderButton
+              >
                 <Download className="w-5 h-5" /> Download CV
               </AnimatedBorderButton>
             </div>
