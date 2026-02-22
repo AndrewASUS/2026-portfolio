@@ -6,19 +6,19 @@ const socialLinks = [
   { icon: Linkedin, href: "https://www.linkedin.com/in/andrew-walton-859a70336", label: "LinkIn" }
 ]
 
-const footerLinks = [
-  { href: "#hero", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" }
-]
+// const footerLinks = [
+//   { href: "#hero", label: "Home" },
+//   { href: "#about", label: "About" },
+//   { href: "#projects", label: "Projects" },
+//   { href: "#contact", label: "Contact" }
+// ]
 
 function Footer() {
 
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="py-12 border-t border-border">
+    <footer className="py-6 border-t border-border">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* LOGO & COPYRIGHT*/}
@@ -32,7 +32,7 @@ function Footer() {
           </div>
 
           {/* LINKS */}
-          <nav className="flex flex-wrap justify-center gap-6">
+          {/* <nav className="flex flex-wrap justify-center gap-6">
             {footerLinks.map((link) => (
               <a
                 key={link.href}
@@ -42,7 +42,7 @@ function Footer() {
                 {link.label}
               </a>
             ))}
-          </nav>
+          </nav> */}
 
           {/* SOCIAL LINKS */}
           <div className="flex items-center gap-4">
