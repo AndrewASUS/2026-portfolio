@@ -24,7 +24,10 @@ const skills = [
 
 function Hero() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center overflow-hidden"
+    >
       {/* BACKGROUND IMAGE */}
       <div className="absolute inset-0">
         <img
@@ -39,6 +42,7 @@ function Hero() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(60)].map((_, i) => (
           <div
+            key={i}
             className="absolute w-1.5 h-1.5 rounded-full opacity-60"
             style={{
               backgroundColor: "#20B2A6",
@@ -84,7 +88,16 @@ function Hero() {
 
             {/* CALL TO ACTION */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-400">
-              <Button size="lg">
+              <Button
+                size="lg"
+                onClick={() => {
+                  // Scroll to the element with id="contact"
+                  const el = document.getElementById("contact");
+                  if (el) {
+                    el.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              >
                 Contact Me <Mail className="w-5 h-5 cursor-pointer" />
               </Button>
 
@@ -106,7 +119,7 @@ function Hero() {
                 {
                   icon: Linkedin,
                   href: "https://www.linkedin.com/in/andrew-walton-859a70336",
-                  target: "_blank"
+                  target: "_blank",
                 },
               ].map((social, index) => (
                 <a

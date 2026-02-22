@@ -6,14 +6,12 @@ const navLinks = [
   { href: "#hero", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
-  { href: "#contact", label: "Contact" }
+  { href: "#contact", label: "Contact" },
 ];
 
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIscrolled] = useState(false);
-
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,10 +22,10 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
-
   return (
-    <header className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScrolled? "glass-strong" : "bg-transparent p-5 "} z-50`}>
+    <header
+      className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScrolled ? "glass-strong" : "bg-transparent p-5 "} z-50`}
+    >
       <nav className="container mx-auto px-6 flex items-center justify-between py-2">
         {/* LEFT SIDE */}
         <a
@@ -54,7 +52,18 @@ function Navbar() {
 
         {/* CONATCT ME BUTTON */}
         <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
+          <Button
+            size="sm"
+            onClick={() => {
+              // Scroll to the element with id="contact"
+              const el = document.getElementById("contact");
+              if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
+            Contact Me
+          </Button>
         </div>
 
         {/* HAMBURGER NAV */}

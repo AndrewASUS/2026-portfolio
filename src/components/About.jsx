@@ -1,4 +1,4 @@
-import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
+import { ChevronDown, Code2, Lightbulb, Rocket, Users } from "lucide-react";
 
 const highlights = [
   {
@@ -11,7 +11,7 @@ const highlights = [
     icon: Rocket,
     title: "Performance",
     description:
-      "Optimizing for speed and delivering lighting-fast user experiences.",
+      "Optimizing for perfection and delivering unique user experiences.",
   },
   {
     icon: Users,
@@ -28,7 +28,7 @@ const highlights = [
 
 function About() {
   return (
-    <section id="about" className="p-32 relative overflow-hidden">
+    <section id="about" className="p-32 relative overflow-hidden min-h-screen flex flex-row justify-center items-center">
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* LEFT COLUMN */}
@@ -42,7 +42,7 @@ function About() {
               Building the future,
               <span className="font-serif italic font-normal text-white">
                 {" "}
-                One component at a a time.
+                One Git push at a a time.
               </span>
             </h2>
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
@@ -90,11 +90,24 @@ function About() {
                 <h3 className="text-lg font-semibold mb-2">
                   {highlight.title}
                 </h3>
-                <p className="text-sm text-muted-foreground">{highlight.description}</p>
+                <p className="text-sm text-muted-foreground">
+                  {highlight.description}
+                </p>
               </div>
             ))}
           </div>
         </div>
+      </div>
+
+      {/* SCROLL INDICATOR */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <a
+          href="#projects"
+          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary/75 transition-colors"
+        >
+          <span className="text-xs uppercase tracking-wider">Scroll</span>
+          <ChevronDown className="w-6 h-6 animate-bounce" />
+        </a>
       </div>
     </section>
   );

@@ -1,10 +1,10 @@
-import { Github, ArrowUpRight } from "lucide-react";
+import { Github, ArrowUpRight, ChevronDown } from "lucide-react";
 
 const projects = [
   {
     title: "Netflix Clone",
     description:
-      "A fully functional full-stack Netflix clone built with the MERN stack, featuring secure authorisation and complete CRUD functionality.",
+      "A fully functional full-stack Netflix clone built with the MERN stack, featuring secure authentication and using an API from TMDB.",
     image: "netflix.svg",
     tags: [
       "React",
@@ -21,7 +21,7 @@ const projects = [
   {
     title: "Messenger",
     description:
-      "A fully functional full-stack Netflix clone built with the MERN stack, featuring secure authorisation and complete CRUD functionality.",
+      "A fully functional full-stack Netflix clone built with the MERN stack, featuring secure authentication and real time live updates.",
     image: "messenger.svg",
     tags: [
       "React",
@@ -38,7 +38,7 @@ const projects = [
   {
     title: "E-commerce store",
     description:
-      "A fully functional full-stack Netflix clone built with the MERN stack, featuring secure authorisation and complete CRUD functionality.",
+      "A fully functional full-stack Netflix clone built with the MERN stack, featuring secure authentication and Stripe payments.",
     image: "online-store.svg",
     tags: [
       "React",
@@ -56,7 +56,7 @@ const projects = [
 
 function Projects() {
   return (
-    <section id="projects" className="py-32 relative overflow-hidden">
+    <section id="projects" className="py-32 relative overflow-hidden min-h-screen flex flex-row justify-center items-center">
       {/* BG GLOW */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl" />
@@ -139,6 +139,17 @@ function Projects() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* SCROLL INDICATOR */}
+      <div className="absolute bottom-1 left-1/2 -translate-x-1/2">
+        <a
+          href="#contact"
+          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary/75 transition-colors"
+        >
+          <span className="text-xs uppercase tracking-wider">Scroll</span>
+          <ChevronDown className="w-6 h-6 animate-bounce" />
+        </a>
       </div>
     </section>
   );
