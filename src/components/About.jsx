@@ -28,7 +28,10 @@ const highlights = [
 
 function About() {
   return (
-    <section id="about" className="p-32 relative overflow-hidden min-h-screen flex flex-row justify-center items-center">
+    <section
+      id="about"
+      className="p-8 sm:p-16 md:p-32 relative overflow-hidden min-h-screen flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16"
+    >
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* LEFT COLUMN */}
@@ -100,7 +103,7 @@ function About() {
       </div>
 
       {/* SCROLL INDICATOR */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+      <div className="hidden lg:block absolute bottom-8 left-1/2 -translate-x-1/2">
         <a
           href="#projects"
           className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary/75 transition-colors"

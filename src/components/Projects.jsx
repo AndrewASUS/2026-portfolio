@@ -146,7 +146,7 @@ function Projects() {
       </div>
 
       {/* SCROLL INDICATOR */}
-      <div className="absolute bottom-1 left-1/2 -translate-x-1/2">
+      <div className="hidden lg:block absolute bottom-8 left-1/2 -translate-x-1/2">
         <a
           href="#contact"
           className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary/75 transition-colors"

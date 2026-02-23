@@ -26,7 +26,7 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative min-h-screen flex flex-col md:flex-row items-center justify-center px-4 sm:px-8 md:px-32 overflow-hidden"
     >
       {/* BACKGROUND IMAGE */}
       <div className="absolute inset-0">
@@ -102,8 +102,7 @@ function Hero() {
               </Button>
 
               {/* ANIMATED SVG BORDER */}
-              <AnimatedBorderButton
-              >
+              <AnimatedBorderButton>
                 <Download className="w-5 h-5" /> Download CV
               </AnimatedBorderButton>
             </div>
@@ -156,14 +155,6 @@ function Hero() {
                     </span>
                   </div>
                 </div>
-
-                {/* STATS BADGE */}
-                {/* <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">2+</div>
-                  <div className="text-sm text-muted-foreground">
-                    Years experience
-                  </div>
-                </div> */}
               </div>
             </div>
           </div>
@@ -189,13 +180,15 @@ function Hero() {
       </div>
 
       {/* SCROLL INDICATOR */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+      <div className="hidden lg:block absolute bottom-8 left-1/2 -translate-x-1/2">
         <a
           href="#about"
-          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary/75 transition-colors"
+          className="flex flex-col items-center gap-1 sm:gap-2 text-muted-foreground hover:text-primary/75 transition-colors"
         >
-          <span className="text-xs uppercase tracking-wider">Scroll</span>
-          <ChevronDown className="w-6 h-6 animate-bounce" />
+          <span className="text-[10px] sm:text-xs uppercase tracking-wider">
+            Scroll
+          </span>
+          <ChevronDown className="w-5 h-5 sm:w-6 sm:h-6 animate-bounce" />
         </a>
       </div>
     </section>
